@@ -1,0 +1,80 @@
+/* Weather App Container */
+.weather-app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  transition: background 1s ease-in-out;
+  position: relative;
+  padding: 20px;
+}
+.heading{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+/* Dark overlay for better readability */
+.weather-app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Centering content */
+.weather-info {
+  text-align: center;
+}
+
+/* Background Images */
+.clear-sky { background: url('https://images.pexels.com/photos/15941875/pexels-photo-15941875/free-photo-of-a-seagull-flying-over-the-ocean-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; }
+.cloudy { background: url('https://images.pexels.com/photos/30989786/pexels-photo-30989786/free-photo-of-misty-alpine-mountains-in-tirol-austria.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; }
+.rainy { background: url('https://images.pexels.com/photos/29704363/pexels-photo-29704363/free-photo-of-rainy-day-in-japanese-garden-with-umbrella.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; }
+.stormy { background: url('https://images.pexels.com/photos/29472366/pexels-photo-29472366/free-photo-of-tranquil-forest-pathway-in-autumn.jpeg') no-repeat center center/cover; }
+.snowy { background: url('https://images.pexels.com/photos/45204/alm-friuli-snow-snowfall-45204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; }
+.misty { background: url('https://images.pexels.com/photos/158672/fog-forest-mountain-world-clouds-158672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; }
+.hazy { background: url('https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; }
+.default { background: url('https://4kwallpapers.com/images/walls/thumbs_3t/9773.jpg') no-repeat center center/cover; }
+
+/* Button Styling */
+.toggle-btn {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  text-shadow: none;
+  transition: background 0.3s ease-in-out;
+}
+.toggle-btn:hover {
+  transform: scale(0.97);
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px 4px black;
+}
+.toggle-btn:active {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .weather-app {
+      font-size: 14px;
+      padding: 20px;
+  }
+  .toggle-btn {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
